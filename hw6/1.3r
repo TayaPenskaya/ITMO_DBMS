@@ -1,0 +1,8 @@
+select Students.StudentId, StudentName, GroupId 
+  from Courses, Students
+ where CourseName = :CourseName 
+   and Students.StudentId in
+       (select StudentId
+          from Marks
+         where Mark = :Mark
+           and Courses.CourseId = Marks.CourseId);

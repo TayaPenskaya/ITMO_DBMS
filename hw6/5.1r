@@ -1,0 +1,11 @@
+select GroupId, CourseId 
+  from Groups, Courses 
+ where (GroupId, CourseId) not in 
+       (select GroupId, CourseId 
+          from Students, Courses 
+         where (StudentId, CourseId) in 
+               (select StudentId, CourseId 
+                  from Students, Courses 
+                 where (StudentId, CourseId) not in 
+                       (select StudentId, CourseId 
+                          from Marks)))

@@ -1,0 +1,8 @@
+r(StudentId) :-
+    Lecturers(LecturerId, :LecturerName),
+    Plan(GroupId, CourseId, LecturerId), 
+    Students(StudentId, _, GroupId),
+    Marks(StudentId, CourseId, _).
+q(StudentId) :-
+    Students(StudentId, _, _),
+    ¬ r(StudentId).

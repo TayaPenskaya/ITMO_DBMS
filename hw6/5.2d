@@ -1,0 +1,14 @@
+StHaveMarks(StudentId, CourseId) :-
+    Students(StudentId, _, _),
+    Marks(StudentId, CourseId, _).
+StNoMarks(StudentId, CourseId) :-
+    Courses(CourseId, _),
+    Students(StudentId, _, _),
+    ¬ StHaveMarks(StudentId, CourseId).
+GrNoMarks(GroupId, CourseId) :-
+    Students(StudentId, _, GroupId),
+    StNoMarks(StudentId, CourseId).
+r(GroupName, CourseName) :-
+    Groups(GroupId, GroupName),
+    Courses(CourseId, CourseName),
+    ¬ GrNoMarks(GroupId, CourseId).
