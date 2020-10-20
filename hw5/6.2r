@@ -1,0 +1,1 @@
+pi{StudentId}(Students) diff pi{StudentId}(Students njoin Marks njoin Plan lsemi sigma{LecturerName = :LecturerName}(Lecturers))

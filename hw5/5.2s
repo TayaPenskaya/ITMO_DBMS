@@ -1,0 +1,1 @@
+select StudentName, CourseName from (select StudentId, StudentName, CourseId from Students natural join Plan except select StudentId, StudentName, CourseId from Students natural join Plan natural join Marks) A natural join Courses;

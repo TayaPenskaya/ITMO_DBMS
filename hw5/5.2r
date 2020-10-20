@@ -1,0 +1,1 @@
+pi{StudentName, CourseName}((Students njoin Plan njoin Courses) diff (Students njoin Plan njoin Courses lsemi Marks))

@@ -1,0 +1,1 @@
+pi{StudentId, StudentName, GroupId}(sigma{Mark = :Mark ⋀ CourseId = :CourseId}(Marks njoin Students))

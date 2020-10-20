@@ -1,0 +1,1 @@
+pi{StudentId, StudentName, GroupId}(Students njoin Plan njoin sigma{CourseName = :CourseName}(Courses)) ∖ pi{StudentId, StudentName, GroupId}(Students njoin Marks njoin sigma{CourseName = :CourseName}(Courses))
